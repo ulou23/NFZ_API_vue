@@ -1,7 +1,8 @@
 import VueRouter from "vue-router";
 import Provider from "@/components/Provider";
 import About from "@/components/About";
-import { userSetter } from "core-js/fn/symbol";
+import User from "@/components/User";
+
 
 const routes=[
     {
