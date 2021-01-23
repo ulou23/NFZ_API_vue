@@ -1,13 +1,18 @@
 <template>
   <div id="app">
+    
     <img alt="Vue logo" src="./assets/logo.png">
-    <div class="nav">
-    <router-link to="/"> Home </router-link>
-   <p>  </p>
-    <router-link to="/about"> About </router-link>
-    </div>
+ <b-nav>
+   <b-nav-item>  <router-link to="/">  Home  </router-link> </b-nav-item>
+   
+    <b-nav-item> <router-link to="/about"> About </router-link> </b-nav-item>
+ </b-nav>
+    <div class="container">
     <router-view />
+    </div>
+    
   </div>
+
 </template>
 
 
