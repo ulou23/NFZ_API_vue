@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     
+    <v-app-bar prominent > <v-app-bar-title>NFZ data </v-app-bar-title></v-app-bar>
+    <v-main>
     <img alt="Vue logo" src="./assets/logo.png">
- <b-nav>
+ <b-nav tabs align="center">
    <b-nav-item>  <router-link to="/">  Home  </router-link> </b-nav-item>
    
     <b-nav-item> <router-link to="/about"> About </router-link> </b-nav-item>
@@ -10,6 +12,7 @@
     <div class="container">
     <router-view />
     </div>
+    </v-main>
     
   </div>
 
