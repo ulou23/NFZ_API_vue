@@ -18,10 +18,10 @@ const routes=[
         component: About,
     },
     {
-        path:"/user/:name",
+        path:"/user",
         name:"User",
         component:User ,
-        props: true,
+        
     }
 ]
 

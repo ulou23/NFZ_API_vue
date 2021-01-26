@@ -6,6 +6,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
  <b-nav tabs align="center">
    <b-nav-item>  <router-link to="/">  Home  </router-link> </b-nav-item>
+    <b-nav-item>  <router-link to="/user">  UserCart  </router-link> </b-nav-item>
    
     <b-nav-item> <router-link to="/about"> About NFZ providers</router-link> </b-nav-item>
  </b-nav>
