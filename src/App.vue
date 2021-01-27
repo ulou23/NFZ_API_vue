@@ -1,8 +1,13 @@
 <template>
   <div id="app">
-    
-    <v-app-bar prominent > <v-app-bar-title>NFZ data </v-app-bar-title></v-app-bar>
-    <v-main>
+    <v-toolbar>
+      <v-icon>arrow_back</v-icon>
+      <v-toolbar-title>
+      <span> NFZ API Fetch</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+    </v-toolbar>
+   <v-content>
     <img alt="Vue logo" src="./assets/logo.png">
  <b-nav tabs align="center">
    <b-nav-item>  <router-link to="/">  Home  </router-link> </b-nav-item>
@@ -13,12 +18,40 @@
     <div class="container">
     <router-view />
     </div>
-    </v-main>
+    <div>
+    <Projekts :pages="pages" @new-note="newNote"/>
+    </div>
+    </v-content>
     
   </div>
 
 </template>
+<script>
+import Projekts from './components/Projekts.vue'
 
+export default {
+  name:"app",
+  components:{
+    Projekts
+  },
+  data: ()=> ({
+    pages:[],
+    index:0
+  }),
+  methods:{
+    newNote(){
+      this.pages.push({
+        title:'love',
+        content:'registration rules'
+      });
+      console.log(this.pages)
+    },
+    saveNote(){
+      
+    },
+  }
+}
+</script>
 
 <style>
 #app {
