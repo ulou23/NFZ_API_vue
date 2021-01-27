@@ -12,7 +12,7 @@
                  </tbody>
             
         </table>
-        
+    
 </div>
 </template>
 
@@ -24,6 +24,7 @@ import axios from 'axios';
 
 export default {
     name: 'About',
+
     data() {
         return {
             

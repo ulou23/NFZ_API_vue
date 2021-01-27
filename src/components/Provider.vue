@@ -45,14 +45,18 @@
 
         </table>
         </div>
+    <store />
     </div>
+
 </template>
 <script>
 
 import axios from 'axios';
+import Store from './Store'
 
 export default {
     name: 'Provider',
+    components: { Store },
     data() {
         return {
             
