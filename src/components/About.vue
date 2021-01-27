@@ -2,14 +2,15 @@
     
 <div>
     <h1> NFZ providers </h1>
-    <table class="table">
-            
+    <table class="table table-striped">
+              
+                 <tbody>
                 <tr v-for="prov in datanfz" :key='prov.id'>
-                 
+                    
                      <td> {{ prov }} </td>
-
+                     </tr>
+                 </tbody>
             
-</tr>
         </table>
         
 </div>

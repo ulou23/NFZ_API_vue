@@ -27,8 +27,11 @@
     </b-form>
 </b-modal>
         <div>
-        <table class="table">
-            
+        <table class="table table-striped table-bordered table-sm">
+            <thead>
+                <tr><th>benefit</th><th>Provider</th><th>Locality</th><th>Regon</th><th>Covid-19</th></tr>
+                </thead>
+                <tbody>
                 <tr v-for="prov in lists" :key='prov.id'>
                     <td> {{ prov.benefit }} </td>
                      <td> {{ prov.provider }} </td>
@@ -37,6 +40,7 @@
     <td> {{ prov.covid_19 }} </td>
 
                 </tr>
+                </tbody>
             
 
         </table>
