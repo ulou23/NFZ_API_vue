@@ -2,8 +2,8 @@
     
 <b-container>
     <b-row>
-        <div class="col bg-dark text-white">
-            <a class="navbar-brand"> STORE </a>
+        <div class="col bg-dark text-white m-3">
+            <a class="navbar-brand"> Health STORE </a>
 </div>
     </b-row>
     <b-row>

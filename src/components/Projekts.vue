@@ -8,7 +8,7 @@
                 </b-card-title>
             </b-card>
           
-                 <b-button size="lg" variant="info" class="mb-1"  @click="newNote()">
+                 <b-button size="lg" variant="info" class="mb-1"  @click="newNote()">Add Note
        <b-icon icon="star-fill" animation="fade" font-scale="1"></b-icon>
     </b-button>
                    
