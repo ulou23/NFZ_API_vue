@@ -1,10 +1,10 @@
 # vue_entropy
 
-exercises/ practical Project
+####exercises/ practical Project####
 
-Django > backend API axios 
+**_Django_**> backend API axios 
 API oficial website NFZ > axios API get data
-
+***
 VUEX
 BootstrapVue
 VueRouter
