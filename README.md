@@ -1,5 +1,15 @@
 # vue_entropy
 
+exercises/ practical Project
+
+Django > backend API axios 
+API oficial website NFZ > axios API get data
+
+VUEX
+BootstrapVue
+VueRouter
+
+
 ## Project setup
 ```
 npm install

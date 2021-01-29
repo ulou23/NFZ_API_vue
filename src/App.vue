@@ -1,13 +1,6 @@
 <template>
   <div id="app">
-    <v-toolbar>
-      <v-icon>arrow_back</v-icon>
-      <v-toolbar-title>
-      <span> NFZ API Fetch</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-    </v-toolbar>
-   <v-content>
+
     <img alt="Vue logo" src="./assets/logo.png">
  <b-nav tabs align="center">
    <b-nav-item>  <router-link to="/">  Home  </router-link> </b-nav-item>
@@ -21,7 +14,7 @@
     <div>
     <Projekts :pages="pages" @new-note="newNote"/>
     </div>
-    </v-content>
+    
     
   </div>
 
