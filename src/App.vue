@@ -20,7 +20,9 @@
 
 </template>
 <script>
-import Projekts from './components/Projekts.vue'
+import Projekts from './components/Projekts.vue';
+
+
 
 export default {
   name:"app",
@@ -42,6 +44,7 @@ export default {
     saveNote(){
       
     },
+  
   }
 }
 </script>

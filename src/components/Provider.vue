@@ -53,6 +53,7 @@
 
 import axios from 'axios';
 import Store from './Store'
+import { mapActions } from "vuex";
 
 export default {
     name: 'Provider',
@@ -73,21 +74,22 @@ export default {
         };
     },
     methods: {
-        getData(){
+        getDataBack(){
             const path='http://localhost:8000/api/list';
             axios.get(path).then((res)=> {
                 this.lists =res.data;
             }).catch((error)=> { console.log(error);
             });
         },
-    },
+            ...mapActions(["getData"]),
+    
     addProvider(payload){
         const path='http://localhost:8000/api/';
         axios.post(path,payload).then(()=> {
-            this.getData();
+            this.getDataBack();
         }).catch((error)=> {
             console.log(error);
-            this.getData();
+            this.getDataBack();
         });
     },
     initInput(){
@@ -115,7 +117,9 @@ export default {
         this.addProvider(payload);
         this.initInput();
     },
+    },
     created(){
+        this.getDataBack();
         this.getData();
     }
 }
