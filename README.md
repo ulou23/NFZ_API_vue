@@ -4,6 +4,7 @@
 
 * **_Django_**> backend API ***axios*** 
 * API oficial website NFZ > ***axios*** API get data
+* json-server via ***axios*** ***vuex Store*** jsonwebtoken
 ***
 Buildt with:
 
@@ -11,6 +12,8 @@ Buildt with:
 * Axios
 * BootstrapVue
 * VueRouter
+* Vuelidate
+* Faker ( for tests)
 
 
 ## Project setup
