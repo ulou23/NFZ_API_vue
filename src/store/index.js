@@ -18,14 +18,17 @@ export default new Vuex.Store({
         products:testdata,
         productstotal: testdata.length,
         currPage:1,
-        pageSize:5
+        pageSize:5,
+        currCat: "All",
     },
     getters:{
+        productfilterByCat: state => state.products.filter(p=> state.currCat=="All" || p.category == state.currCat),
         processProducts:state=>{
             let index=(state.currPage-1)* state.pageSize;
             return state.products.slice(index,index+state.pageSize);
         },
-        pageCount:state=> Math.ceil(state.productstotal/state.pageSize)
+        pageCount:state=> Math.ceil(state.productstotal/state.pageSize),
+        categories: state =>[ "All", ...new Set(state.products.map(p=> p.category).sort())]
     },
     mutations: {
         setCurrPage(state,page){
@@ -33,6 +36,10 @@ export default new Vuex.Store({
         },
         setPageSize(state,size){
             state.pageSize=size;
+            state.currPage=1;
+        },
+        setCurrCat(state,category){
+            state.currCat=category;
             state.currPage=1;
         }
     }
