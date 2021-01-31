@@ -7,6 +7,7 @@
     <b-nav-item>  <router-link to="/user">  UserCart  </router-link> </b-nav-item>
    
     <b-nav-item> <router-link to="/about"> About NFZ providers</router-link> </b-nav-item>
+    <b-nav-item><router-link to="/edit"> Edit products</router-link></b-nav-item>
  </b-nav>
     <div class="container">
     <router-view />

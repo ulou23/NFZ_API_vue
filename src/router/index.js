@@ -3,6 +3,7 @@ import Vue from "vue";
 import Provider from "@/components/Provider";
 import About from "@/components/About";
 import User from "@/components/User";
+import DisplayPro from "@/components/DisplayPro";
 
 
 
@@ -22,6 +23,11 @@ const routes=[
         name:"User",
         component:User ,
         
+    },
+    {
+        path:"/edit",
+        name: "Edit",
+        component: DisplayPro,
     }
 ]
 

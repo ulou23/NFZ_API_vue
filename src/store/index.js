@@ -27,6 +27,7 @@ export default new Vuex.Store({
         currPage:1,
         pageSize:5,
         currCat: "All",
+        selectedProduct:null
     },
     getters:{
         productfilterByCat: state => state.products.filter(p=> state.currCat=="All" || p.category == state.currCat),
@@ -54,6 +55,22 @@ export default new Vuex.Store({
             state.productstotal=data.pdata.length;
             state.categories_data=data.cdata.sort();
         }
+    ,
+    saveProduct(currState, product){
+        let index=currState.products.findIndex(p=> p.id == product.id);
+        if (index==-1){
+            currState.products.push(product);
+        }else{
+            Vue.set(currState.products, index, product)
+        }
+    },
+    deletePro(currState,product){
+        let index=currState.products.findIndex(p=>p.id == product.id);
+        currState.products.splice(index,1);
+    },
+    selectPro(currState,product){
+        currState.selectedProduct=product;
+    }
     },
     actions:{
         async getData(context){
@@ -61,6 +78,24 @@ export default new Vuex.Store({
             let cdata=(await Axios.get(categU)).data;
             context.commit("setData", {pdata,cdata});
 
+        },
+        async getProdAx(context){
+            (await Axios.get(baseU)).data.forEach(p=>context.commit("saveProduct",p));
+        },
+
+        async saveProductAx(context, product){
+            let index=context.state.products.findIndex(p=>p.id ==product.id);
+            if (index==-1){
+            await Axios.post(baseU,product)
+            }else{
+
+              await Axios.put(`${baseU}${product.id}`, product);
+            }
+            context.commit("saveProduct", product)
+        },
+        async deleteProductAx(context,product){
+            await Axios.delete(`${baseU}${product.id}`);
+            context.commit("deletePro", product)
         }
     }
 })
